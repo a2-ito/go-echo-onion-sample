@@ -2,10 +2,10 @@ package main
 
 import (
 	"github.com/a2-ito/go-echo-onion-sample/interactor"
+	"github.com/a2-ito/go-echo-onion-sample/presentation/http/echo/router"
 	//"github.com/nanamen/go-echo-rest-sample/interactor"
-	"net/http"
-	//"github.com/a2-ito/go-echo-onion-sample/presentation/http/echo/router"
 	"github.com/labstack/echo"
+	"net/http"
 )
 
 func main() {

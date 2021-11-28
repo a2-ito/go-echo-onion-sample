@@ -14,14 +14,14 @@ type (
 )
 
 //func NewUserHandler(u usecase.UserUseCase) UserHandler {
-func NewUserHandler() UserHandler {
-	return &userHandler
+func NewUserHandler(u usecase.UserUseCase) UserHandler {
+	return &userHandler{u}
 }
 
-func (h *userHandler) Get(c echo.Context) error {
+func Get(c echo.Context) error {
 	return c.String(http.StatusOK, "Hello World!")
 }
 
-func (h *userHandler) GetUsers(c echo.Context) error {
+func GetUsers(c echo.Context) error {
 	return c.String(http.StatusOK, "Hello World! GetUsers")
 }
