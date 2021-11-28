@@ -1,19 +1,27 @@
 package handler
 
 import (
+	"github.com/a2-ito/go-echo-onion-sample/usecase"
 	"github.com/labstack/echo"
 	"net/http"
 )
 
-type UserHander interface {
-	Get(c echo.Context) error
-	GetUsers(c echo.Context) error
+type (
+	UserHandler interface {
+		Get(c echo.Context) error
+		GetUsers(c echo.Context) error
+	}
+)
+
+//func NewUserHandler(u usecase.UserUseCase) UserHandler {
+func NewUserHandler() UserHandler {
+	return &userHandler
 }
 
-func (h *userHnadler) Get(c echo.Context) error {
+func (h *userHandler) Get(c echo.Context) error {
 	return c.String(http.StatusOK, "Hello World!")
 }
 
-func (h *userHnadler) GetUsers(c echo.Context) error {
+func (h *userHandler) GetUsers(c echo.Context) error {
 	return c.String(http.StatusOK, "Hello World! GetUsers")
 }

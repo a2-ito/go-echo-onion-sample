@@ -1,8 +1,9 @@
 package main
 
 import (
-  "net/http"
 	"github.com/a2-ito/go-echo-onion-sample/interactor"
+	//"github.com/nanamen/go-echo-rest-sample/interactor"
+	"net/http"
 	//"github.com/a2-ito/go-echo-onion-sample/presentation/http/echo/router"
 	"github.com/labstack/echo"
 )

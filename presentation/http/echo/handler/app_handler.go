@@ -1,5 +1,7 @@
 package handler
 
-type AppHandler interface {
-	UserHandler
-}
+type (
+	AppHandler interface {
+		UserHandler
+	}
+)
