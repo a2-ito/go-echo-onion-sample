@@ -1,7 +1,7 @@
 package handler
 
 import (
-	"github.com/a2-ito/go-echo-onion-sample/usecase"
+	"github.com/a2-ito/go-echo-onion-sample/application"
 	"github.com/labstack/echo"
 	"net/http"
 )
