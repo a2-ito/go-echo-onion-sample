@@ -1,7 +1,8 @@
 package router
 
 import (
-  "github.com/a2-ito/go-echo-onion-sample/presentation/http/handler"
+	"github.com/a2-ito/go-echo-onion-sample/presentation/http/handler"
+	"github.com/labstack/echo"
 )
 
 func SetRouter(e *echo.Echo, h handler.AppHandler) {

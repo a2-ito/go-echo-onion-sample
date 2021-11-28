@@ -1,22 +1,25 @@
 package interactor
 
 import (
-  "github.com/a2-ito/go-echo-onion-sample/presentation/http/echo/handler"
+	"github.com/a2-ito/go-echo-onion-sample/presentation/http/echo/handler"
 )
 
-type {
-  Interactor interface {
-    NewUserHnadler() handler.UserHnadler
-  }
+type (
+	Interactor interface {
+		NewAppHandler() handler.AppHandler
+		NewUserHandler() handler.UserHandler
+	}
 
-  interactor struct {
-  }
-}
+	interactor struct {
+	}
+)
 
 func NewInteractor() Interactor {
-  return &interactor{}
+	return nil
 }
 
-func (i *interactor) NewUserHandler() handler.UserHnadler {
-  return handler.NewUserHnadler(i.NewUserUseCAse())
+func (i *interactor) NewAppHandler() handler.AppHandler {
+	appHandler := &appHandler{}
+	//appHandler.UserHandler = i.NewUserHandler()
+	return appHandler
 }
