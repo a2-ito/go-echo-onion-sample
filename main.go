@@ -1,6 +1,7 @@
 package main
 
 import (
+	//"github.com/jinzhu/gorm"
 	"github.com/a2-ito/go-echo-onion-sample/interactor"
 	"github.com/a2-ito/go-echo-onion-sample/presentation/http/echo/router"
 	//"github.com/nanamen/go-echo-rest-sample/interactor"
@@ -11,10 +12,11 @@ import (
 func main() {
 	e := echo.New()
 
-	//i := interactor.NewInteractor()
-	//h := i.NewAppHandler()
+	//conn := conf.NewDBConnection()
+	i := interactor.NewInteractor()
+	h := i.NewAppHandler()
 
-	//router.SetRouter(e, h)
+	router.SetRouter(e, h)
 	e.GET("/", func(c echo.Context) error {
 		return c.String(http.StatusOK, "Hello, World")
 	})

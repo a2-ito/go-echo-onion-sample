@@ -1,7 +1,7 @@
 package usecase
 
 import (
-  "context"
+	"context"
 	"github.com/a2-ito/go-echo-onion-sample/domain/repository"
 )
 
@@ -21,9 +21,9 @@ func NewUserUseCase(r repository.UserRepository) UserUseCase {
 }
 
 func (u *userUseCase) Get(ctx context.Context) error {
-  return u.UserRepository.Fetch(ctx)
+	return u.UserRepository.Fetch(ctx)
 }
 
 func (u *userUseCase) GetUsers(ctx context.Context) error {
-  return u.UserRepository.Fetch(ctx)
+	return u.UserRepository.Fetch(ctx)
 }

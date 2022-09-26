@@ -11,6 +11,10 @@ type (
 		Get(c echo.Context) error
 		GetUsers(c echo.Context) error
 	}
+
+	userHandler struct {
+		UserUseCase usecase.UserUseCase
+	}
 )
 
 //func NewUserHandler(u usecase.UserUseCase) UserHandler {
@@ -18,10 +22,10 @@ func NewUserHandler(u usecase.UserUseCase) UserHandler {
 	return &userHandler{u}
 }
 
-func Get(c echo.Context) error {
+func (h *userHandler) Get(c echo.Context) error {
 	return c.String(http.StatusOK, "Hello World!")
 }
 
-func GetUsers(c echo.Context) error {
+func (h *userHandler) GetUsers(c echo.Context) error {
 	return c.String(http.StatusOK, "Hello World! GetUsers")
 }

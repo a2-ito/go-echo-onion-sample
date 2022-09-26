@@ -1,12 +1,11 @@
 package repository
 
 import (
-  "context"
+	"context"
 )
 
 type (
-  UserRepository interface {
-    Fetch(ctx context.Context) error
-  }
+	UserRepository interface {
+		Fetch(ctx context.Context) error
+	}
 )
-
