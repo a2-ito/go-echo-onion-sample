@@ -17,7 +17,7 @@ type (
 	}
 )
 
-//func NewUserHandler(u usecase.UserUseCase) UserHandler {
+// func NewUserHandler(u usecase.UserUseCase) UserHandler {
 func NewUserHandler(u usecase.UserUseCase) UserHandler {
 	return &userHandler{u}
 }

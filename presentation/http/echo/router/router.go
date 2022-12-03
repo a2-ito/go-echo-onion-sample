@@ -1,7 +1,8 @@
 package router
 
 import (
-	"github.com/a2-ito/go-echo-onion-sample/presentation/http/echo/handler"
+	//"github.com/a2-ito/go-echo-onion-sample/presentation/http/echo/handler"
+	handler "handler"
 	"github.com/labstack/echo"
 )
 

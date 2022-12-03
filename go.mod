@@ -1,8 +1,13 @@
 module github.com/a2-ito/go-echo-onion-sample
 
-go 1.17
+go 1.19
 
 require github.com/labstack/echo v3.3.10+incompatible
+
+require interactor v0.0.0
+require router v0.0.0
+require handler v0.0.0
+require repository v0.0.0
 
 require (
 	github.com/jinzhu/gorm v1.9.16 // indirect
@@ -18,3 +23,8 @@ require (
 	golang.org/x/sys v0.0.0-20211103235746-7861aae1554b // indirect
 	golang.org/x/text v0.3.6 // indirect
 )
+
+replace interactor => ./interactor
+replace router => ./presentation/http/echo/router
+replace handler => ./presentation/http/echo/handler
+replace repository => ./domain/repository

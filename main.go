@@ -2,11 +2,10 @@ package main
 
 import (
 	//"github.com/jinzhu/gorm"
-	"github.com/a2-ito/go-echo-onion-sample/interactor"
-	"github.com/a2-ito/go-echo-onion-sample/presentation/http/echo/router"
-	//"github.com/nanamen/go-echo-rest-sample/interactor"
 	"github.com/labstack/echo"
+	interactor "interactor"
 	"net/http"
+	router "router"
 )
 
 func main() {

@@ -2,7 +2,8 @@ package usecase
 
 import (
 	"context"
-	"github.com/a2-ito/go-echo-onion-sample/domain/repository"
+	//"github.com/a2-ito/go-echo-onion-sample/domain/repository"
+	repository "repository"
 )
 
 type (

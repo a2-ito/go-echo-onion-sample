@@ -2,9 +2,11 @@ package interactor
 
 import (
 	"github.com/a2-ito/go-echo-onion-sample/application"
-	"github.com/a2-ito/go-echo-onion-sample/domain/repository"
+	//"github.com/a2-ito/go-echo-onion-sample/domain/repository"
+	repository "repository"
 	"github.com/a2-ito/go-echo-onion-sample/infrastructure/persistence/datastore"
-	"github.com/a2-ito/go-echo-onion-sample/presentation/http/echo/handler"
+	//"github.com/a2-ito/go-echo-onion-sample/presentation/http/echo/handler"
+	handler "handler"
 	//"github.com/jinzhu/gorm"
 )
 
@@ -22,9 +24,9 @@ type (
 )
 
 /*
-func NewInteractor(Conn *gorm.DB) Interactor {
-	return &interactor{Conn}
-}
+	func NewInteractor(Conn *gorm.DB) Interactor {
+		return &interactor{Conn}
+	}
 */
 func NewInteractor() Interactor {
 	return &interactor{}

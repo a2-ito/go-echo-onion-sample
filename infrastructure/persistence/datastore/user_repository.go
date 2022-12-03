@@ -3,8 +3,9 @@ package datastore
 import (
 	"context"
 
-	"github.com/a2-ito/go-echo-onion-sample/domain/repository"
+	//"github.com/a2-ito/go-echo-onion-sample/domain/repository"
 	"github.com/jinzhu/gorm"
+	repository "repository"
 )
 
 type userRepository struct {
